@@ -10,7 +10,7 @@ This repository contains a series of scripts designed to automate high-throughpu
 - **Energy extraction**: xTB geometry optimizations are run with `GFN2-xTB`, and the total energy of each molecule is extracted and saved in CSV format.
 - **Duplicate handling**: Scripts ensure that previously optimized molecules are skipped to avoid redundant calculations.
 - **Progress tracking**: The progress of the optimization is tracked and printed in real-time.
-
+- **Checking the size of an XYZ file**: The script parses xyz files and counts the number of molecule. 
 ## Requirements
 
 - Python 3.x
