@@ -1,2 +1,2 @@
-# high-throughput-xTB
-These scripts are for multi-nodal high throughput xTB calculations
+# xtb_highthroughput_relaxation
+Scripts for high-throughput xTB geometry optimization and file handling on HPC systems.
