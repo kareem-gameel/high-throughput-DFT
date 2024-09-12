@@ -22,10 +22,10 @@ This repository contains a series of scripts designed to automate high-throughpu
 ## Workflow
 
 1. **Splitting the XYZ file**:
-   Use `split.py` to split the large XYZ file into smaller files, each in separate directory to ensure no conflicts during parallel computations within the same node. Each file will contain an approximately equal number of molecules.
+   Use `split_xyz.py` to split the large XYZ file into smaller files, each in separate directory to ensure no conflicts during parallel computations within the same node. Each file will contain an approximately equal number of molecules.
 
    ```bash
-   python split.py
+   python split_xyz.py
    ```
 
 2. **Prepare SLURM job**:
@@ -43,7 +43,7 @@ This repository contains a series of scripts designed to automate high-throughpu
 
 ## File Structure
 
-- **`split.py`**: Script to split the large XYZ file into smaller chunks for parallel processing.
+- **`split_xyz.py`**: Script to split the large XYZ file into smaller chunks for parallel processing.
 - **`job.sh`**: SLURM job submission script to run multiple geometry optimizations in parallel.
 - **`run.py`**: The main script that runs xTB geometry optimizations and saves the results.
 - **`optimized.xyz`**: Output file that contains optimized geometries.
@@ -53,7 +53,7 @@ This repository contains a series of scripts designed to automate high-throughpu
 
 1. Split the XYZ file into smaller files in separate directories:
    ```bash
-   python split.py
+   python split_xyz.py
    ```
 
 2. Submit the SLURM job to run the optimization:
