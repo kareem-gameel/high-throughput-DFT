@@ -12,11 +12,14 @@ if len(sys.argv) != 2:
 # Get the split XYZ file from the command line argument
 split_file = sys.argv[1]
 
-# Define the output file paths in the current directory
-optimized_xyz_path = 'optimized.xyz'
-optimized_energies_path = 'optimized_energies.csv'
+# Get the directory where the split file is located
+split_dir = os.path.dirname(split_file)
 
-# Create or overwrite the optimized_energies.csv file in the current directory
+# Define the output file paths in the same directory as the split file
+optimized_xyz_path = os.path.join(split_dir, 'optimized.xyz')
+optimized_energies_path = os.path.join(split_dir, 'optimized_energies.csv')
+
+# Create or overwrite the optimized_energies.csv file if it doesn't exist
 if not os.path.exists(optimized_energies_path):
     with open(optimized_energies_path, 'w') as energy_file:
         # Write the header for the CSV file
