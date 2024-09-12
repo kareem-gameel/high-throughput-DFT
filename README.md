@@ -45,9 +45,10 @@ This repository contains a series of scripts designed to automate high-throughpu
 
 - **`split_xyz.py`**: Script to split the large XYZ file into smaller chunks for parallel processing.
 - **`job.sh`**: SLURM job submission script to run multiple geometry optimizations in parallel.
-- **`run.py`**: The main script that runs xTB geometry optimizations and saves the results.
+- **`run_serial_xtb.py`**: The main script that runs xTB geometry optimizations and saves the results.
 - **`optimized.xyz`**: Output file that contains optimized geometries.
 - **`optimized_energies.csv`**: Output CSV file that contains the `mol_id` and their corresponding optimized energy.
+- **`check_size.py`**: The script parses xyz files and counts the number of molecule. 
 
 ## Example Usage
 
